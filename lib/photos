@@ -1,0 +1,9 @@
+
+export async function getData(offset) {
+
+  const response = await fetch(`http://xoosha.com/ws/1/test.php?offset=${offset}`);
+
+  return {
+    data: await response.json()
+  };
+}
