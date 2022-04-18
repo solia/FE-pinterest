@@ -38,7 +38,7 @@ export default function Home() {
       console.log("loading: ", loading)
       setLoading(true);
 
-      fetch(`http://xoosha.com/ws/1/test.php?offset=${offset}`)
+      fetch(`https://xoosha.com/ws/1/test.php?offset=${offset}`)
         .then(response => response.json())
         .then(json => {
           setProducts((oldData) => [...oldData, ...json]);
