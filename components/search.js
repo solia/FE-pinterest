@@ -2,14 +2,8 @@ import React, { useState } from 'react';
 
 export default function Search({ setSearch }) {
 
-  const handleSubmit = (event) => {
-    if (event.key === 'Enter') {
-      setSearch(event.target.value);
-    }
-  };
-
   const handleChange = (event) => {
-    
+    setSearch(event.target.value);
   };
 
   return (
@@ -23,7 +17,6 @@ export default function Search({ setSearch }) {
         id="company-website"
         className="flex-1 block w-full bg-gray-50 sm:text-sm m-3 ml-0 focus:outline-none"
         //placeholder="www.example.com"
-        onKeyDown={handleSubmit}
         onChange={handleChange}
       />
     </div>
